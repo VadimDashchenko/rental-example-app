@@ -6,9 +6,9 @@ const COMMUNITY_CATEGORIES = [
   'Apartment'
 ];
 
-export default class IndexRoute extends Route {
-  async model() {
-    let response = await fetch('api/rentals.json');
+export default class RentalRoute extends Route {
+  async model(params) {
+    let response = await fetch(`api/rental/${params.rental_id}.json`);
     let {data} = await response.json();
 
     return data.map(model => {
