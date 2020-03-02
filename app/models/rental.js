@@ -1,7 +1,7 @@
 import Model, { attr } from '@ember-data/model';
 
 const COMMUNITY_CATEGORIES = [
-  'Congo',
+  'Condo',
   'Townhouse',
   'Apartment'
 ];
@@ -11,13 +11,13 @@ export default class RentalModel extends Model {
   @attr owner;
   @attr city;
   @attr location;
-  @attr categories;
+  @attr category;
   @attr image;
   @attr bedrooms;
   @attr description;
 
   get type() {
-    if(COMMUNITY_CATEGORIES.includes(this.categories)) {
+    if(COMMUNITY_CATEGORIES.includes(this.category)) {
       return 'Community';
     } else {
       return 'Standalone';
