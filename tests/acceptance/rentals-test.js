@@ -18,7 +18,7 @@ module('Acceptance | rentals', function (hooks) {
     assert.equal(currentURL(), '/about');
   });
 
-  test('viewing the details of a rental property', async function(assert) {
+  test('Viewing the details of a rental property', async function(assert) {
     await visit('/');
     assert.dom('.rental').exists({ count: 3 });
 
@@ -60,7 +60,7 @@ module('Acceptance | rentals', function (hooks) {
     assert.equal(currentURL(), '/getting-in-touch')
   });
 
-  test('visiting /getting-in-touch', async function (assert) {
+  test('visiting/getting-in-touch', async function (assert) {
     await visit('/getting-in-touch');
 
     assert.equal(currentURL(), '/getting-in-touch');
